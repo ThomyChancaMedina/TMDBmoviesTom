@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">TMDBmoviesTom</string>
+    <string name="api_key">b97980fbb4f500325322088e80685159</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_more">More</string>
+    <string name="item_update">Update</string>
+
+    <string name="apiKey">b97980fbb4f500325322088e80685159</string>
+    <string name="menu_movies">Movies</string>
+    <string name="menu_tv_series">TV Series</string>
+    <string name="text_popular">Popular</string>
+    <string name="text_highest_rate">Highest rate</string>
+    <string name="text_upcoming">Upcoming</string>
+    <string name="close_nav_drawer">Close navigation drawer</string>
+    <string name="open_nav_drawer">Open navigation drawer</string>
+
+</resources>
