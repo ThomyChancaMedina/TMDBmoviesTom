@@ -1,4 +1,4 @@
-package com.thomy.tmdbmoviestom.data.db
+package com.thomy.tmdbmoviestom.data.db.movies
 
 import androidx.room.Dao
 import androidx.room.Insert

@@ -1,7 +1,6 @@
-package com.example.data.repository
+package com.example.data.source.movies
 
 
-import com.example.data.source.MovieCacheDataSource
 import com.example.domain.Movie
 import io.reactivex.Flowable
 
@@ -11,8 +10,6 @@ class MovieCacheDataSourceImpl : MovieCacheDataSource {
 
 
     override fun getMoviesFromCache(): Flowable<List<Movie>> {
-
-
         return Flowable.just(moviesList)
     }
 

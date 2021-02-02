@@ -3,8 +3,10 @@ package com.thomy.tmdbmoviestom.di
 
 import android.app.Application
 import com.thomy.tmdbmoviestom.di.core.*
-import com.thomy.tmdbmoviestom.presentation.MainActivityComponent
-import com.thomy.tmdbmoviestom.presentation.MainActivityModule
+import com.thomy.tmdbmoviestom.presentation.ui.movie.MoviesFragmentComponent
+import com.thomy.tmdbmoviestom.presentation.ui.movie.MoviesFragmentModule
+import com.thomy.tmdbmoviestom.presentation.ui.tvshow.TvShowsFragmentComponent
+import com.thomy.tmdbmoviestom.presentation.ui.tvshow.TvShowsFragmentModule
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -20,10 +22,11 @@ import javax.inject.Singleton
     ]
 )
 interface AppComponent {
-    fun plus(module: MainActivityModule): MainActivityComponent
+    fun plus(module: MoviesFragmentModule): MoviesFragmentComponent
+    fun plus(module: TvShowsFragmentModule):TvShowsFragmentComponent
 
     @Component.Factory
-    interface Factory{
-        fun create(@BindsInstance app: Application):AppComponent
+    interface Factory {
+        fun create(@BindsInstance app: Application): AppComponent
     }
 }

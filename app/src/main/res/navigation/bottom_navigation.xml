@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_navigation_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.thomy.tmdbmoviestom.presentation.ui.movie.MoviesFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_moviesFragment"
+            app:destination="@id/moviesFragment" />
+        <action
+            android:id="@+id/action_tvShowFragment"
+            app:destination="@id/tvShowFragment" />
+        <action
+            android:id="@+id/action_artistsFragment"
+            app:destination="@id/artistsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="com.thomy.tmdbmoviestom.presentation.ui.movie.MoviesFragment"
+        android:label="MoviesFragment" />
+    <fragment
+        android:id="@+id/tvShowFragment"
+        android:name="com.thomy.tmdbmoviestom.presentation.ui.tvshow.TvShowFragment"
+        android:label="TvShowFragment" />
+    <fragment
+        android:id="@+id/artistsFragment"
+        android:name="com.thomy.tmdbmoviestom.presentation.ui.artist.ArtistsFragment"
+        android:label="ArtistsFragment" />
+</navigation>

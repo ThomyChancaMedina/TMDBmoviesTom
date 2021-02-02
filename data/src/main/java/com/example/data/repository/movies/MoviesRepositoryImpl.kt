@@ -1,19 +1,19 @@
-package com.example.data
+package com.example.data.repository.movies
 
-import com.example.data.source.MovieCacheDataSource
-import com.example.data.source.MovieLocalDataSource
-import com.example.data.source.MovieRemoteDataSource
+import com.example.data.source.RemoteDataSource
+import com.example.data.source.movies.MovieCacheDataSource
+import com.example.data.source.movies.MovieLocalDataSource
 import com.example.domain.Movie
 import io.reactivex.BackpressureStrategy
 import io.reactivex.Flowable
 import io.reactivex.Observable
 
-class MoviesRepository(
+class MoviesRepositoryImpl(
     private val localDataSource: MovieLocalDataSource,
-    private val remoteDataSource: MovieRemoteDataSource,
+    private val remoteDataSource: RemoteDataSource,
     private val cacheDataSource: MovieCacheDataSource,
     private val apiKey: String
-) : MovieRepositoryImpl {
+) : MovieRepository {
     override fun getMovies(): Observable<List<Movie>> = getMoviesFromCache().toObservable()
 
     override fun updateMovies(): Observable<List<Movie>> = getMoviesFromAPI()
