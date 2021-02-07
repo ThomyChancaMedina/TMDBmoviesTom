@@ -23,7 +23,7 @@
         android:label="MoviesFragment" />
     <fragment
         android:id="@+id/tvShowFragment"
-        android:name="com.thomy.tmdbmoviestom.presentation.ui.tvshow.TvShowFragment"
+        android:name="com.thomy.tmdbmoviestom.presentation.ui.tvshow.TvShowsFragment"
         android:label="TvShowFragment" />
     <fragment
         android:id="@+id/artistsFragment"

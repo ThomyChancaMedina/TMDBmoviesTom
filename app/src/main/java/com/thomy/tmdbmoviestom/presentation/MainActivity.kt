@@ -3,9 +3,6 @@ package com.thomy.tmdbmoviestom.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.NavigationUI
 import com.thomy.tmdbmoviestom.R
 import com.thomy.tmdbmoviestom.databinding.ActivityMainBinding
 import com.thomy.tmdbmoviestom.presentation.common.addFragmentToActivity
@@ -27,46 +24,41 @@ class MainActivity : AppCompatActivity() {
             setContentView(root)
 
             if (savedInstanceState == null) {
-                addFragmentToActivity(TvShowFragment(), R.id.fragment_container)
+                addFragmentToActivity(MoviesFragment(), R.id.fragment_container)
             }
 
-            val navHostFragment =
-                supportFragmentManager.findFragmentById(R.id.main_fragment_container) as NavHostFragment
-            val navController = navHostFragment.navController
+//            val navHostFragment =
+//                supportFragmentManager.findFragmentById(R.id.main_fragment_container) as NavHostFragment
+//            val navController = navHostFragment.navController
+//
+//            NavigationUI.setupWithNavController(bottomNavigation, navController)
+//
+//            navController.addOnDestinationChangedListener { _, destination, _ ->
+//                when (destination.id) {
+//                    R.id.moviesFragment -> bottomNavigation.visibility = View.GONE
+//                    R.id.tvShowFragment -> bottomNavigation.visibility = View.GONE
+//                    R.id.artistsFragment -> bottomNavigation.visibility = View.GONE
+//                    else -> bottomNavigation.visibility = View.VISIBLE
+//                }
+//            }
 
-            NavigationUI.setupWithNavController(bottomNavigation, navController)
-
-            navController.addOnDestinationChangedListener { _, destination, _ ->
-                when (destination.id) {
-                    R.id.moviesFragment -> bottomNavigation.visibility = View.GONE
-                    R.id.tvShowFragment -> bottomNavigation.visibility = View.GONE
-                    R.id.artistsFragment -> bottomNavigation.visibility = View.GONE
-                    else -> bottomNavigation.visibility = View.VISIBLE
-                }
-            }
-
-            bottomNavigation.apply {
-
-                setOnNavigationItemSelectedListener { item ->
-                    when (item.itemId) {
-                        R.id.action_popular_movie -> {
-                            replaceFragmentInActivity(TvShowFragment(), R.id.fragment_container)
-                            true
-                        }
-                        R.id.action_tv_series -> {
-                            replaceFragmentInActivity(MoviesFragment(), R.id.fragment_container)
-                            true
-                        }
-                        R.id.action_actors -> {
-                            replaceFragmentInActivity(ArtistsFragment(), R.id.fragment_container)
-                            true
-                        }
-                        else -> false
+            bottomNavigation.setOnNavigationItemSelectedListener { item ->
+                when (item.itemId) {
+                    R.id.action_popular_movie -> {
+                        replaceFragmentInActivity(MoviesFragment(), R.id.fragment_container)
+                        true
                     }
+                    R.id.action_tv_series -> {
+                        replaceFragmentInActivity(TvShowFragment(), R.id.fragment_container)
+                        true
+                    }
+                    R.id.action_actors -> {
+                        replaceFragmentInActivity(ArtistsFragment(), R.id.fragment_container)
+                        true
+                    }
+                    else -> false
                 }
             }
-
-
         }
     }
 }

@@ -35,7 +35,7 @@ class MoviesFragment : Fragment(), OnItemClickListenerMovie {
         binding.movieRecyclerView.adapter = adapter
 
         displayPopularMovies()
-        updateMovies()
+//        updateMovies()
 
         return binding.root
     }
@@ -58,7 +58,7 @@ class MoviesFragment : Fragment(), OnItemClickListenerMovie {
                 },
                 {
                     movieProgressBar.visibility = View.GONE
-                    Log.e(TAG, it.message.toString())
+//                    Log.e(TAG, it.message.toString())
                 },
                 { movieProgressBar.visibility = View.GONE }
             )

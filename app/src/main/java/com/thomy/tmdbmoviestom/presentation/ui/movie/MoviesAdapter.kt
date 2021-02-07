@@ -1,6 +1,7 @@
 package com.thomy.tmdbmoviestom.presentation.ui.movie
 
 
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -22,6 +23,7 @@ class MoviesAdapter(
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        Log.d("TAG", "onCreateViewHolder: "+movies.size)
         val view = parent.inflate(R.layout.movie_item, false)
         return ViewHolder(view)
     }
@@ -38,9 +40,9 @@ class MoviesAdapter(
         private val viewBinding = MovieItemBinding.bind(view)
         fun bind(movie: Movie, itemClickListener: OnItemClickListenerMovie) {
             with(viewBinding) {
-                cardViewBack.setOnClickListener {
-                    itemClickListener.onItemCLicked(movie)
-                }
+//                cardViewBack.setOnClickListener {
+//                    itemClickListener.onItemCLicked(movie)
+//                }
                 movieTitle.text = movie.title
                 movieCover.loadUrl("https://image.tmdb.org/t/p/w185/${movie.posterPath}")
 

@@ -1,5 +1,6 @@
 package com.thomy.tmdbmoviestom.data.server
 
+import com.example.domain.Artist
 import com.example.domain.Movie
 import com.example.domain.TvShow
 import com.google.gson.annotations.SerializedName
@@ -13,6 +14,11 @@ data class MovieList(
 data class TvShowList(
     @SerializedName("results")
     val tvShowsResult: List<TvShow>
+)
+
+data class ArtistList(
+    @SerializedName("results")
+    val artistsResult: List<Artist>,
 )
 
 

@@ -1,10 +1,11 @@
 package com.thomy.tmdbmoviestom.presentation.ui.tvshow
 
 import androidx.lifecycle.ViewModel
-import com.example.usecase.tvshows.GetTvShowsUseCase
-import com.example.usecase.tvshows.UpdateTvShowsUseCase
+import com.thomy.tmdbmoviestom.usecase.tvshow.GetTvShowsUseCase
+import com.thomy.tmdbmoviestom.usecase.tvshow.UpdateTvShowsUseCase
 
-class TvShowViewModel(
+
+class TvShowsViewModel(
     private val getTvShowsUseCase: GetTvShowsUseCase,
     private val updateTvShowsUseCase: UpdateTvShowsUseCase
 ) : ViewModel() {

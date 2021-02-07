@@ -1,7 +1,8 @@
 package com.thomy.tmdbmoviestom.presentation.ui.movie
 
-import com.example.usecase.movies.GetMoviesUseCase
-import com.example.usecase.movies.UpdateMoviesUseCase
+
+import com.thomy.tmdbmoviestom.usecase.movie.GetMoviesUseCase
+import com.thomy.tmdbmoviestom.usecase.movie.UpdateMoviesUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.Subcomponent

@@ -7,5 +7,4 @@ import io.reactivex.Observable
 interface MovieRepository {
     fun getMovies(): Observable<List<Movie>>
     fun updateMovies(): Observable<List<Movie>>
-
 }

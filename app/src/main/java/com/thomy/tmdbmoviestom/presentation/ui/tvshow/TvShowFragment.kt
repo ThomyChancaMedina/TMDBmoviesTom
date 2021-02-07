@@ -18,7 +18,7 @@ class TvShowFragment : Fragment(), OnItemClickListenerTvShow {
     private val TAG = TvShowFragment::class.java.simpleName
 
     private lateinit var component: TvShowsFragmentComponent
-    private val viewModel: TvShowViewModel by lazy { getViewModelF { component.tvShowViewModel } }
+    private val viewModel: TvShowsViewModel by lazy { getViewModelF { component.tvShowViewModel } }
 
     private lateinit var adapter: TvShowsAdapter
     private lateinit var binding: FragmentTvshowBinding
@@ -35,7 +35,7 @@ class TvShowFragment : Fragment(), OnItemClickListenerTvShow {
         binding.tvShowRecyclerView.adapter = adapter
 
         displayPopularTvShows()
-        updateTvShows()
+//        updateTvShows()
 
         return binding.root
     }

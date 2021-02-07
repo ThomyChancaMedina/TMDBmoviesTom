@@ -1,7 +1,8 @@
 package com.thomy.tmdbmoviestom.presentation.ui.tvshow
 
-import com.example.usecase.tvshows.GetTvShowsUseCase
-import com.example.usecase.tvshows.UpdateTvShowsUseCase
+
+import com.thomy.tmdbmoviestom.usecase.tvshow.GetTvShowsUseCase
+import com.thomy.tmdbmoviestom.usecase.tvshow.UpdateTvShowsUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.Subcomponent
@@ -13,7 +14,7 @@ class TvShowsFragmentModule {
     fun providerTvShowsViewModelFactory(
         getTvShowsUseCase: GetTvShowsUseCase,
         updateTvShowsUseCase: UpdateTvShowsUseCase,
-    ) = TvShowViewModel(
+    ) = TvShowsViewModel(
         getTvShowsUseCase,
         updateTvShowsUseCase
     )
@@ -21,5 +22,5 @@ class TvShowsFragmentModule {
 
 @Subcomponent(modules = [TvShowsFragmentModule::class])
 interface TvShowsFragmentComponent {
-    val tvShowViewModel: TvShowViewModel
+    val tvShowViewModel: TvShowsViewModel
 }

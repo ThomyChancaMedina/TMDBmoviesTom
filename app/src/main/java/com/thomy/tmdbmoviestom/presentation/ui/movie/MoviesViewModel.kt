@@ -1,8 +1,9 @@
 package com.thomy.tmdbmoviestom.presentation.ui.movie
 
 import androidx.lifecycle.ViewModel
-import com.example.usecase.movies.GetMoviesUseCase
-import com.example.usecase.movies.UpdateMoviesUseCase
+import com.thomy.tmdbmoviestom.usecase.movie.GetMoviesUseCase
+import com.thomy.tmdbmoviestom.usecase.movie.UpdateMoviesUseCase
+
 
 class MoviesViewModel(
     private val getMoviesUseCase: GetMoviesUseCase,

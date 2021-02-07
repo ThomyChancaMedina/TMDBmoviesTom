@@ -16,6 +16,6 @@ interface TvShowDao {
     fun deleteAllTvShows()
 
     @Query("SELECT * FROM popular_tvshows")
-    fun getTvShows():Flowable<List<TvShow>>
+    fun getTvShows(): Flowable<List<TvShow>>
 
 }

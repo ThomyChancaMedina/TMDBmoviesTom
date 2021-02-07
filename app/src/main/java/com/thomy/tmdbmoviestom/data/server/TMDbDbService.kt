@@ -16,4 +16,9 @@ interface TMDbDbService {
         @Query("api_key") apiKey: String
     ): Observable<TvShowList>
 
+
+    @GET("person/popular")
+    fun getPopularArtists(
+        @Query("api_key") apiKey: String
+    ): Observable<ArtistList>
 }
