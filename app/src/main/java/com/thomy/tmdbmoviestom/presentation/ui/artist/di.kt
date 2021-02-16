@@ -1,8 +1,8 @@
 package com.thomy.tmdbmoviestom.presentation.ui.artist
 
 
-import com.thomy.tmdbmoviestom.usecase.artist.GetArtistUseCase
-import com.thomy.tmdbmoviestom.usecase.artist.UpdateArtistsUseCase
+import com.example.usecase.artists.GetArtistsUseCase
+import com.example.usecase.artists.UpdateArtistsUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.Subcomponent
@@ -12,7 +12,7 @@ class ArtistsFragmentModule {
 
     @Provides
     fun providerArtistsViewModelFactory(
-        getArtistsUserCase: GetArtistUseCase,
+        getArtistsUserCase: GetArtistsUseCase,
         updateArtistsUseCase: UpdateArtistsUseCase
     ) = ArtistsViewModel(
         getArtistsUserCase,

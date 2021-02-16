@@ -1,8 +1,8 @@
 package com.thomy.tmdbmoviestom.presentation.ui.tvshow
 
 
-import com.thomy.tmdbmoviestom.usecase.tvshow.GetTvShowsUseCase
-import com.thomy.tmdbmoviestom.usecase.tvshow.UpdateTvShowsUseCase
+import com.example.usecase.tvshows.GetTvShowsUseCase
+import com.example.usecase.tvshows.UpdateTvShowsUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.Subcomponent
